@@ -43,6 +43,40 @@ body {
   margin-bottom: 22px;
 }
 
+.proof-strip {
+  display: flex;
+  width: min(1180px, calc(100% - 32px));
+  margin: 18px auto 0;
+  padding: 12px;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+}
+
+.proof-strip a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 9px 13px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.proof-strip a:first-child {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+
 .brand {
   display: flex;
   gap: 14px;
@@ -451,6 +485,14 @@ body {
   .topbar {
     align-items: flex-start;
     gap: 16px;
+  }
+
+  .proof-strip {
+    justify-content: stretch;
+  }
+
+  .proof-strip a {
+    flex: 1 1 140px;
   }
 
   .nav {
