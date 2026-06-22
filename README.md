@@ -1,10 +1,10 @@
 # Mostaql AI Automation Portfolio
 
-Public demo hub for Mostaql portfolio works.
+Public working demo hub for Mostaql portfolio works.
 
 The goal is to give clients visible evidence instead of plain screenshots:
 
-- Live static demos for each portfolio item.
+- Live browser-only interactive demos for each portfolio item.
 - Source code that can be reviewed.
 - Clear result summaries for every demo without claiming unverified production metrics.
 
@@ -20,5 +20,4 @@ The goal is to give clients visible evidence instead of plain screenshots:
 
 ## Notes
 
-These demos are static front-end proof-of-work samples. They are intentionally transparent: they show UI, workflow, expected outputs, and code structure without pretending to be full production deployments.
-
+These demos are interactive front-end proof-of-work samples. They run in the browser, use local state, and demonstrate core flows such as scoring, syncing, querying, cart generation, extraction, and export. They are intentionally transparent: they do not pretend to be full production deployments connected to real customer API keys.
