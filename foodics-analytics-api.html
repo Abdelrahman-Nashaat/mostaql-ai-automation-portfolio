@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Foodics Analytics API Integration</title>
+  <link rel="stylesheet" href="./shared.css">
+</head>
+<body>
+  <main class="frame rtl">
+    <header class="topbar">
+      <div class="brand"><div class="mark">API</div><span>ربط Foodics بلوحة تحليلات</span></div>
+      <nav class="nav"><span>OAuth2</span><span>PostgreSQL</span><span>Multi-tenant</span></nav>
+    </header>
+    <section class="hero">
+      <div class="copy">
+        <h1>نظام وسيط يسحب الطلبات ويجهزها للتحليل</h1>
+        <p>تصور عملي لنظام تكامل API يعزل بيانات كل مطعم، يخزن الطلبات والمنتجات والمدفوعات في قاعدة منظمة، ثم يقدم Endpoints آمنة للوحة التحليلات.</p>
+        <div class="actions">
+          <div class="button primary">Schema واضح</div>
+          <div class="button">توثيق API</div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><strong>8</strong><span>جداول أساسية</span></div>
+          <div class="metric"><strong>99.9%</strong><span>عزل العملاء</span></div>
+          <div class="metric"><strong>15m</strong><span>مزامنة دورية</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div class="panel-title">بنية التكامل والتحليلات</div><div class="dots"><i></i><i></i><i></i></div></div>
+        <div class="panel-body">
+          <div class="grid-2">
+            <div class="card"><span class="status">OAuth2</span><h3>ربط حسابات العملاء</h3><p>حفظ tokens بشكل آمن مع tenant_id لكل مطعم.</p></div>
+            <div class="card"><span class="status">RLS Ready</span><h3>عزل البيانات</h3><p>تصميم جاهز لـ Supabase RLS أو قواعد تحقق داخل API.</p></div>
+          </div>
+          <div class="flow">
+            <div>Foodics</div><div>Worker</div><div>PostgreSQL</div><div>Dashboard API</div>
+          </div>
+          <div class="table" style="margin-top:18px">
+            <div class="row"><strong>GET /orders</strong><span>فلترة بالفروع والتاريخ</span><b>200</b></div>
+            <div class="row"><strong>GET /sales/summary</strong><span>إجماليات يومية</span><b>200</b></div>
+            <div class="row"><strong>POST /sync</strong><span>تشغيل مزامنة يدوية</span><b>202</b></div>
+          </div>
+          <div class="bars" style="margin-top:24px"><div style="height:72%"></div><div style="height:50%"></div><div style="height:91%"></div><div style="height:62%"></div><div style="height:84%"></div><div style="height:56%"></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

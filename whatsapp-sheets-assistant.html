@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WhatsApp Sheets Assistant</title>
+  <link rel="stylesheet" href="./shared.css">
+  <style>
+    .frame { background: linear-gradient(135deg, #f7fbff, #eefdf5); }
+    .hero { grid-template-columns: 0.9fr 1.1fr; }
+    .chat { display: grid; gap: 10px; padding: 14px; background: #f8fafc; border-radius: 24px; }
+    .bubble {
+      max-width: 82%;
+      padding: 12px 14px;
+      border-radius: 18px;
+      font-weight: 700;
+      line-height: 1.38;
+    }
+    .bubble.user { margin-right: auto; background: #dcfce7; color: #14532d; }
+    .bubble.bot { background: #fff; border: 1px solid var(--line); color: #111827; }
+    .sheet {
+      margin-top: 10px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .sheet div {
+      display: grid;
+      grid-template-columns: 1fr 0.8fr 0.8fr;
+      gap: 12px;
+      padding: 9px 12px;
+      border-bottom: 1px solid var(--line);
+      font-weight: 800;
+      font-size: 14px;
+    }
+    .sheet div:last-child { border-bottom: 0; }
+    .sheet span { color: var(--muted); font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main class="frame rtl">
+    <header class="topbar">
+      <div class="brand"><div class="mark">WA</div><span>مساعد واتساب للبيانات</span></div>
+      <nav class="nav"><span>WhatsApp</span><span>Google Sheets</span><span>Natural Language</span></nav>
+    </header>
+    <section class="hero">
+      <div class="copy">
+        <h1>مساعد ذكي يقرأ Google Sheets ويرد على الإدارة عبر واتساب</h1>
+        <p>نموذج عملي يربط الأسئلة العربية ببيانات الجداول، يحول السؤال لاستعلام منظم، ثم يرجع إجابة مختصرة قابلة للاستخدام داخل المحادثة.</p>
+        <div class="metrics">
+          <div class="metric"><strong>AR</strong><span>فهم عربي</span></div>
+          <div class="metric"><strong>Sheets</strong><span>مصدر البيانات</span></div>
+          <div class="metric"><strong>Logs</strong><span>سجل استعلامات</span></div>
+        </div>
+        <div class="actions"><div class="button primary">إجابات فورية</div><div class="button">صلاحيات قراءة</div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div class="panel-title">تجربة المحادثة</div><div class="status">متصل</div></div>
+        <div class="panel-body">
+          <div class="chat">
+            <div class="bubble user">كم عدد الشحنات المتأخرة اليوم؟</div>
+            <div class="bubble bot">يوجد 18 شحنة متأخرة. أعلى فرع: الرياض - 7 شحنات، ثم جدة - 5 شحنات.</div>
+            <div class="bubble user">اعرض الإيراد اليومي والمرتجعات</div>
+            <div class="bubble bot">الإيراد اليومي 42,850 ر.س، المرتجعات 11 طلباً بنسبة 2.6% من الطلبات.</div>
+          </div>
+          <div class="sheet">
+            <div><strong>Metric</strong><strong>Value</strong><strong>Status</strong></div>
+            <div><span>Late shipments</span><span>18</span><span>Alert</span></div>
+            <div><span>Daily revenue</span><span>42,850</span><span>Healthy</span></div>
+            <div><span>Returns</span><span>2.6%</span><span>Watch</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

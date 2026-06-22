@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>n8n Jobs Automation</title>
+  <link rel="stylesheet" href="./shared.css">
+  <style>
+    .frame { background: linear-gradient(135deg, #f8fbff 0%, #edf7f4 100%); }
+    .hero { grid-template-columns: 0.95fr 1.05fr; }
+    .node-map { display: grid; gap: 14px; }
+    .node {
+      display: grid;
+      grid-template-columns: 54px 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+    }
+    .node b {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      place-items: center;
+      border-radius: 15px;
+      background: #ecfdf5;
+      color: #047857;
+      font-size: 18px;
+    }
+    .node strong { display: block; font-size: 16px; }
+    .node span { color: var(--muted); font-size: 13px; font-weight: 700; }
+    .node em {
+      font-style: normal;
+      color: #047857;
+      background: #ecfdf5;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body>
+  <main class="frame rtl">
+    <header class="topbar">
+      <div class="brand"><div class="mark">n8n</div><span>أتمتة نشر أخبار الوظائف</span></div>
+      <nav class="nav"><span>RSS/API</span><span>AI Tags</span><span>WordPress</span></nav>
+    </header>
+    <section class="hero">
+      <div class="copy">
+        <h1>Workflow يجلب أخبار الوظائف وينشرها تلقائياً كل 15 دقيقة</h1>
+        <p>تصميم تدفق n8n يستقبل الأخبار من مصادر متعددة، يمنع التكرار، يصنف المحتوى بالذكاء الاصطناعي، ثم ينشر المقالات في ووردبريس بسجل مراقبة واضح.</p>
+        <div class="metrics">
+          <div class="metric"><strong>3</strong><span>مصادر أخبار</span></div>
+          <div class="metric"><strong>15m</strong><span>تشغيل دوري</span></div>
+          <div class="metric"><strong>0</strong><span>تكرار أخبار</span></div>
+        </div>
+        <div class="actions"><div class="button primary">جاهز للتوسع</div><div class="button">سجل أخطاء</div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">مسار التنفيذ</div>
+          <div class="dots"><i></i><i></i><i></i></div>
+        </div>
+        <div class="panel-body node-map">
+          <div class="node"><b>1</b><div><strong>Collect Sources</strong><span>RSS, API, HTML parsing</span></div><em>كل 15 دقيقة</em></div>
+          <div class="node"><b>2</b><div><strong>Normalize Jobs</strong><span>العنوان، الشركة، المحتوى، الصورة</span></div><em>تنظيف</em></div>
+          <div class="node"><b>3</b><div><strong>AI Categorization</strong><span>تصنيف، tags، ملخص قصير</span></div><em>OpenAI</em></div>
+          <div class="node"><b>4</b><div><strong>Deduplicate</strong><span>Hash للعنوان والرابط والمحتوى</span></div><em>آمن</em></div>
+          <div class="node"><b>5</b><div><strong>Publish to WordPress</strong><span>REST API + draft/publish modes</span></div><em>منشور</em></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

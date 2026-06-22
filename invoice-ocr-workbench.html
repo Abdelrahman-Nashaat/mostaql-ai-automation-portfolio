@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invoice OCR Workbench</title>
+  <link rel="stylesheet" href="./shared.css">
+  <style>
+    .frame { background: linear-gradient(135deg, #f8fbff, #fff7ed); }
+    .hero { grid-template-columns: 1fr 1fr; }
+    .invoice {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+    }
+    .invoice-head { display: flex; justify-content: space-between; margin-bottom: 18px; font-weight: 900; }
+    .scan-line {
+      height: 10px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #fed7aa, #f97316, #fed7aa);
+      margin: 12px 0;
+    }
+    .extract {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .field {
+      padding: 14px;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+    }
+    .field span { display: block; color: var(--muted); font-size: 12px; font-weight: 800; }
+    .field strong { display: block; margin-top: 7px; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <main class="frame rtl">
+    <header class="topbar">
+      <div class="brand"><div class="mark">OCR</div><span>تحليل فواتير PDF بالذكاء الاصطناعي</span></div>
+      <nav class="nav"><span>PDF Split</span><span>OCR</span><span>Validation</span></nav>
+    </header>
+    <section class="hero">
+      <div class="copy">
+        <h1>نظام يفصل الفواتير ويستخرج بياناتها إلى قاعدة بيانات</h1>
+        <p>تصور عملي لمعالجة ملفات PDF تحتوي عدة فواتير: فصل الصفحات، قراءة الحقول الأساسية، التحقق من القيم، ثم حفظ النتائج مع ملف الفاتورة الأصلي.</p>
+        <div class="metrics">
+          <div class="metric"><strong>PDF</strong><span>تقسيم تلقائي</span></div>
+          <div class="metric"><strong>VAT</strong><span>تحقق ضريبي</span></div>
+          <div class="metric"><strong>DB</strong><span>تصدير منظم</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div class="panel-title">Invoice Processing</div><div class="status">Validated</div></div>
+        <div class="panel-body">
+          <div class="invoice">
+            <div class="invoice-head"><span>فاتورة مشتريات</span><span>#INV-2048</span></div>
+            <div class="scan-line"></div>
+            <div class="row"><strong>المورد</strong><span>شركة الغذاء الحديث</span><span>96%</span></div>
+            <div class="row"><strong>الرقم الضريبي</strong><span>3004567891</span><span>Valid</span></div>
+            <div class="extract">
+              <div class="field"><span>قبل الضريبة</span><strong>12,450 ر.س</strong></div>
+              <div class="field"><span>قيمة الضريبة</span><strong>1,867.5 ر.س</strong></div>
+              <div class="field"><span>الإجمالي</span><strong>14,317.5 ر.س</strong></div>
+              <div class="field"><span>الثقة</span><strong>94%</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

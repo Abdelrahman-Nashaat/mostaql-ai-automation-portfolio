@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CRM Lead Agent</title>
+  <link rel="stylesheet" href="./shared.css">
+  <style>
+    .frame { background: linear-gradient(135deg, #f8fbff, #eef2ff); }
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .stage {
+      min-height: 230px;
+      padding: 14px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #f8fafc;
+    }
+    .stage h3 { margin: 0 0 12px; font-size: 15px; }
+    .lead {
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px solid var(--line);
+      font-weight: 800;
+      font-size: 13px;
+    }
+    .lead span { display: block; color: var(--muted); margin-top: 5px; font-weight: 700; }
+    .insight {
+      border: 1px solid #bfdbfe;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border-radius: 18px;
+      padding: 16px;
+      font-weight: 850;
+      line-height: 1.55;
+    }
+  </style>
+</head>
+<body>
+  <main class="frame rtl">
+    <header class="topbar">
+      <div class="brand"><div class="mark">AI</div><span>وكيل مبيعات وتأهيل عملاء</span></div>
+      <nav class="nav"><span>Lead Scoring</span><span>CRM</span><span>Reports</span></nav>
+    </header>
+    <section class="hero">
+      <div class="copy">
+        <h1>AI Agent يصنف العملاء المحتملين ويحدث CRM تلقائياً</h1>
+        <p>نظام عملي يستقبل العملاء من نموذج أو محادثة، يحلل الاحتياج والميزانية وموعد الشراء، ثم ينقل العميل للمرحلة المناسبة مع توصية لفريق المبيعات.</p>
+        <div class="metrics">
+          <div class="metric"><strong>82%</strong><span>دقة التصنيف</span></div>
+          <div class="metric"><strong>4</strong><span>مراحل مبيعات</span></div>
+          <div class="metric"><strong>24/7</strong><span>متابعة تلقائية</span></div>
+        </div>
+        <div class="actions"><div class="button primary">CRM Ready</div><div class="button">AI Summary</div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div class="panel-title">Sales Pipeline</div><div class="status">Live</div></div>
+        <div class="panel-body">
+          <div class="pipeline">
+            <div class="stage"><h3>جديد</h3><div class="lead">عيادة أسنان<span>خدمة واتساب</span></div><div class="lead">متجر عطور<span>سلة + CRM</span></div></div>
+            <div class="stage"><h3>مؤهل</h3><div class="lead">شركة توصيل<span>Budget: High</span></div></div>
+            <div class="stage"><h3>متابعة</h3><div class="lead">مطعم محلي<span>Foodics API</span></div></div>
+            <div class="stage"><h3>جاهز للعرض</h3><div class="lead">وكالة تسويق<span>n8n + OpenAI</span></div></div>
+          </div>
+          <div class="insight">التوصية: ابدأ بعميل شركة التوصيل، الاحتياج واضح والميزانية عالية وموعد القرار خلال 7 أيام.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
